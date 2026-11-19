@@ -1,0 +1,1784 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>套路每日调教大赛 - 原创视频社区,创意挑战官方平台</title>
+<meta name="description" content="套路每日调教大赛官方网站，专注创意套路短片的原创视频社区，聚合每日挑战、创作者作品与企业内容生态，提供高清正版内容与专业创作支持。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2a4a'/%3E%3Cpath d='M24 18l22 14-22 14z' fill='%23ff5a5f'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+:root{
+  --taolu-ink:#141b2d;
+  --taolu-navy:#1b2a4a;
+  --taolu-navy-soft:#2b3d63;
+  --taolu-coral:#ff5a5f;
+  --taolu-coral-dark:#e04348;
+  --taolu-amber:#ffd166;
+  --taolu-mint:#4ecdc4;
+  --taolu-bg:#f6f7fb;
+  --taolu-card:#ffffff;
+  --taolu-line:#e2e6f0;
+  --taolu-muted:#5d6880;
+  --taolu-shadow:0 14px 36px rgba(20,27,45,.10);
+  --taolu-radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--taolu-bg);
+  color:var(--taolu-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+ul{list-style:none;}
+
+.taolu-sticky-wrap{
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 4px 20px rgba(20,27,45,.08);
+}
+.taolu-notice-bar{
+  background:linear-gradient(90deg,var(--taolu-navy) 0%,var(--taolu-navy-soft) 55%,#35507f 100%);
+  color:#dfe6f5;
+  font-size:13px;
+  padding:9px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  letter-spacing:.2px;
+}
+.taolu-notice-bar .taolu-notice-tag{
+  background:var(--taolu-coral);
+  color:#fff;
+  padding:1px 9px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1px;
+  flex-shrink:0;
+}
+.taolu-notice-bar a{color:var(--taolu-amber);font-weight:600;}
+.taolu-notice-bar a:hover{text-decoration:underline;}
+
+.taolu-header{
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--taolu-line);
+}
+.taolu-header-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 24px;
+  height:70px;
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+.taolu-logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-shrink:0;
+}
+.taolu-logo-mark{
+  width:38px;height:38px;border-radius:11px;
+  background:linear-gradient(135deg,var(--taolu-navy),#35507f);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 16px rgba(27,42,74,.28);
+}
+.taolu-logo-mark svg{width:20px;height:20px;}
+.taolu-logo-text{display:flex;flex-direction:column;line-height:1.2;}
+.taolu-logo-text b{font-size:16px;letter-spacing:.5px;}
+.taolu-logo-text span{font-size:10.5px;color:var(--taolu-muted);letter-spacing:1.6px;}
+.taolu-nav{
+  display:flex;
+  gap:4px;
+  flex:1;
+  flex-wrap:wrap;
+}
+.taolu-nav a{
+  padding:8px 13px;
+  border-radius:9px;
+  font-size:14.5px;
+  color:var(--taolu-muted);
+  font-weight:500;
+  transition:background .2s,color .2s;
+  white-space:nowrap;
+}
+.taolu-nav a:hover,.taolu-nav a.taolu-nav-active{background:#eef1f8;color:var(--taolu-navy);font-weight:700;}
+.taolu-header-tools{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+.taolu-search-box{
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+.taolu-search-box input{
+  width:190px;
+  padding:9px 38px 9px 14px;
+  border-radius:24px;
+  border:1.5px solid var(--taolu-line);
+  background:#f4f6fb;
+  font-size:13.5px;
+  color:var(--taolu-ink);
+  outline:none;
+  transition:border-color .2s,width .25s,background .2s;
+}
+.taolu-search-box input:focus{border-color:var(--taolu-coral);background:#fff;width:225px;}
+.taolu-search-box button{
+  position:absolute;right:5px;top:50%;transform:translateY(-50%);
+  width:29px;height:29px;border-radius:50%;
+  background:var(--taolu-navy);
+  display:flex;align-items:center;justify-content:center;
+}
+.taolu-search-box button svg{width:14px;height:14px;stroke:#fff;}
+.taolu-btn-primary{
+  background:var(--taolu-coral);
+  color:#fff;
+  font-weight:700;
+  font-size:14px;
+  padding:10px 20px;
+  border-radius:24px;
+  transition:background .2s,transform .2s,box-shadow .2s;
+  box-shadow:0 8px 18px rgba(255,90,95,.32);
+}
+.taolu-btn-primary:hover{background:var(--taolu-coral-dark);transform:translateY(-1px);}
+.taolu-menu-toggle{
+  display:none;
+  width:40px;height:40px;
+  border-radius:10px;
+  background:#eef1f8;
+  align-items:center;justify-content:center;
+  flex-direction:column;gap:4px;
+}
+.taolu-menu-toggle span{display:block;width:18px;height:2px;background:var(--taolu-navy);border-radius:2px;transition:.25s;}
+.taolu-search-feedback{
+  position:absolute;
+  top:46px;left:0;right:0;
+  background:#fff;
+  border:1px solid var(--taolu-line);
+  border-radius:12px;
+  box-shadow:var(--taolu-shadow);
+  font-size:12.5px;
+  color:var(--taolu-muted);
+  padding:10px 14px;
+  display:none;
+  z-index:30;
+  line-height:1.6;
+}
+.taolu-search-feedback.taolu-show{display:block;}
+.taolu-search-feedback b{color:var(--taolu-coral-dark);}
+
+.taolu-section{
+  max-width:1200px;
+  margin:0 auto;
+  padding:70px 24px;
+  scroll-margin-top:118px;
+}
+.taolu-section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:38px;
+  flex-wrap:wrap;
+}
+.taolu-section-title{display:flex;align-items:center;gap:14px;}
+.taolu-section-title .taolu-title-bar{
+  width:5px;height:30px;border-radius:4px;
+  background:linear-gradient(180deg,var(--taolu-coral),var(--taolu-amber));
+  flex-shrink:0;
+}
+.taolu-section-title h2{
+  font-size:26px;
+  letter-spacing:.4px;
+  color:var(--taolu-navy);
+  line-height:1.3;
+}
+.taolu-section-title p{font-size:13.5px;color:var(--taolu-muted);margin-top:3px;}
+.taolu-section-more{
+  font-size:13.5px;color:var(--taolu-coral-dark);font-weight:700;
+  display:inline-flex;align-items:center;gap:5px;
+}
+.taolu-section-more:hover{gap:9px;}
+.taolu-section-more i{font-style:normal;transition:transform .2s;}
+.taolu-section-more:hover i{transform:translateX(3px);}
+
+/* ---------- HERO ---------- */
+.taolu-hero{
+  background:
+    radial-gradient(circle at 82% 12%,rgba(255,209,102,.22),transparent 46%),
+    radial-gradient(circle at 6% 88%,rgba(78,205,196,.16),transparent 42%),
+    linear-gradient(130deg,#131c30 0%,#1b2a4a 52%,#24395e 100%);
+  color:#eef2fa;
+  position:relative;
+  overflow:hidden;
+}
+.taolu-hero::after{
+  content:"";
+  position:absolute;
+  right:-120px;bottom:-160px;
+  width:460px;height:460px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 0 0 46px rgba(255,255,255,.03);
+  pointer-events:none;
+}
+.taolu-hero-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:64px 24px 76px;
+  display:grid;
+  grid-template-columns:1.06fr .94fr;
+  gap:54px;
+  align-items:center;
+  position:relative;
+  z-index:2;
+}
+.taolu-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:24px;
+  padding:6px 14px;
+  font-size:12.5px;
+  letter-spacing:.4px;
+  color:var(--taolu-amber);
+  margin-bottom:20px;
+}
+.taolu-hero-badge .taolu-dot{
+  width:7px;height:7px;border-radius:50%;background:var(--taolu-coral);
+  box-shadow:0 0 0 4px rgba(255,90,95,.24);
+  animation:taoluPulse 1.8s infinite;
+}
+@keyframes taoluPulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+.taolu-hero h1{
+  font-size:47px;
+  line-height:1.18;
+  letter-spacing:1px;
+  font-weight:800;
+  margin-bottom:20px;
+}
+.taolu-hero h1 em{
+  font-style:normal;
+  color:var(--taolu-amber);
+  position:relative;
+}
+.taolu-hero h1 em::after{
+  content:"";
+  position:absolute;left:0;right:0;bottom:2px;height:8px;
+  background:rgba(255,90,95,.42);
+  border-radius:4px;
+  z-index:-1;
+}
+.taolu-hero-desc{
+  font-size:15px;
+  color:#c0cbe2;
+  max-width:540px;
+  margin-bottom:28px;
+}
+.taolu-hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px;}
+.taolu-btn-ghost{
+  border:1.5px solid rgba(255,255,255,.34);
+  color:#eef2fa;
+  font-weight:600;
+  font-size:14px;
+  padding:10px 22px;
+  border-radius:24px;
+  transition:background .2s,border-color .2s;
+}
+.taolu-btn-ghost:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.6);}
+.taolu-hero-stats{
+  display:flex;
+  gap:34px;
+  flex-wrap:wrap;
+  border-top:1px solid rgba(255,255,255,.14);
+  padding-top:24px;
+}
+.taolu-hero-stats div b{
+  font-size:26px;
+  color:#fff;
+  font-weight:800;
+  letter-spacing:.5px;
+}
+.taolu-hero-stats div b i{font-style:normal;font-size:14px;color:var(--taolu-amber);margin-left:2px;}
+.taolu-hero-stats div span{display:block;font-size:12.5px;color:#9dabc9;margin-top:2px;}
+
+.taolu-hero-visual{position:relative;}
+.taolu-hero-cover{
+  border-radius:20px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 30px 60px rgba(5,10,22,.55);
+  border:1px solid rgba(255,255,255,.14);
+}
+.taolu-hero-cover img{width:100%;aspect-ratio:16/10;object-fit:cover;}
+.taolu-hero-cover .taolu-cover-label{
+  position:absolute;left:14px;top:14px;
+  background:rgba(255,90,95,.94);
+  color:#fff;font-size:12px;font-weight:700;
+  padding:4px 11px;border-radius:20px;letter-spacing:1px;
+}
+.taolu-hero-cover .taolu-cover-play{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:64px;height:64px;border-radius:50%;
+  background:rgba(255,255,255,.9);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 12px 30px rgba(0,0,0,.34);
+  transition:transform .25s;
+}
+.taolu-hero-cover:hover .taolu-cover-play{transform:translate(-50%,-50%) scale(1.08);}
+.taolu-hero-cover .taolu-cover-play svg{width:24px;height:24px;margin-left:4px;}
+.taolu-hero-cover .taolu-cover-cap{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:36px 16px 14px;
+  background:linear-gradient(0deg,rgba(8,14,28,.9),transparent);
+  font-size:14px;font-weight:600;color:#f2f5fb;
+}
+.taolu-hero-float{
+  position:absolute;
+  background:#fff;
+  border-radius:14px;
+  box-shadow:var(--taolu-shadow);
+  padding:11px 16px;
+  display:flex;align-items:center;gap:10px;
+  animation:taoluFloat 5s ease-in-out infinite;
+}
+@keyframes taoluFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+.taolu-hero-float.taolu-float-a{right:-16px;top:26px;}
+.taolu-hero-float.taolu-float-b{left:-18px;bottom:44px;animation-delay:1.4s;}
+.taolu-float-ico{
+  width:32px;height:32px;border-radius:10px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;
+}
+.taolu-float-ico.taolu-f-coral{background:#ffe9ea;color:var(--taolu-coral-dark);}
+.taolu-float-ico.taolu-f-mint{background:#e2f8f6;color:#1c8a83;}
+.taolu-hero-float b{font-size:13px;color:var(--taolu-ink);display:block;line-height:1.3;}
+.taolu-hero-float span{font-size:11px;color:var(--taolu-muted);}
+
+/* ---------- ABOUT ---------- */
+.taolu-about{
+  background:#fff;
+  border-bottom:1px solid var(--taolu-line);
+}
+.taolu-about-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:76px 24px;
+}
+.taolu-about-grid{
+  display:grid;
+  grid-template-columns:.92fr 1.08fr;
+  gap:52px;
+  align-items:start;
+}
+.taolu-about-left h2{
+  font-size:30px;
+  line-height:1.32;
+  color:var(--taolu-navy);
+  margin-bottom:18px;
+  letter-spacing:.4px;
+}
+.taolu-about-left h2 span{color:var(--taolu-coral-dark);}
+.taolu-about-left p{
+  font-size:14.5px;
+  color:var(--taolu-muted);
+  margin-bottom:16px;
+  text-align:justify;
+}
+.taolu-about-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px;}
+.taolu-tag{
+  font-size:12.5px;
+  padding:5px 13px;
+  border-radius:20px;
+  background:#eef1f8;
+  color:var(--taolu-navy);
+  font-weight:600;
+}
+.taolu-tag.taolu-tag-hot{background:#ffe9ea;color:var(--taolu-coral-dark);}
+.taolu-about-quote{
+  border-left:4px solid var(--taolu-amber);
+  background:#fbf8ee;
+  padding:16px 20px;
+  border-radius:0 12px 12px 0;
+  font-size:13.5px;
+  color:#6a5b2f;
+  margin-top:24px;
+  line-height:1.8;
+}
+.taolu-about-right h3{
+  font-size:19px;
+  color:var(--taolu-navy);
+  margin-bottom:14px;
+  display:flex;align-items:center;gap:9px;
+}
+.taolu-about-right h3::before{
+  content:"";width:6px;height:6px;border-radius:50%;background:var(--taolu-coral);
+}
+.taolu-about-right p{
+  font-size:14px;
+  color:#46506a;
+  margin-bottom:14px;
+  text-align:justify;
+}
+.taolu-about-feature{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin-top:22px;
+}
+.taolu-about-feature li{
+  background:#f6f8fd;
+  border:1px solid var(--taolu-line);
+  border-radius:12px;
+  padding:13px 15px;
+  font-size:13px;
+  color:#3d4760;
+  display:flex;align-items:flex-start;gap:9px;
+  line-height:1.6;
+}
+.taolu-about-feature li i{
+  font-style:normal;color:var(--taolu-mint);font-weight:800;flex-shrink:0;
+}
+
+/* ---------- FOCUS ---------- */
+.taolu-focus{background:var(--taolu-bg);}
+.taolu-focus-grid{
+  display:grid;
+  grid-template-columns:1.35fr 1fr 1fr;
+  gap:22px;
+}
+.taolu-video-card{
+  background:var(--taolu-card);
+  border-radius:var(--taolu-radius);
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(20,27,45,.05);
+  border:1px solid var(--taolu-line);
+  transition:transform .28s,box-shadow .28s;
+  display:flex;flex-direction:column;
+}
+.taolu-video-card:hover{transform:translateY(-5px);box-shadow:var(--taolu-shadow);}
+.taolu-video-thumb{position:relative;overflow:hidden;}
+.taolu-video-thumb img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .4s;}
+.taolu-video-card:hover .taolu-video-thumb img{transform:scale(1.05);}
+.taolu-video-thumb .taolu-thumb-tag{
+  position:absolute;left:11px;top:11px;
+  background:rgba(20,27,45,.78);
+  color:#fff;font-size:11px;font-weight:600;
+  padding:3px 9px;border-radius:16px;
+  backdrop-filter:blur(4px);
+}
+.taolu-video-thumb .taolu-thumb-time{
+  position:absolute;right:11px;bottom:9px;
+  background:rgba(10,15,28,.8);
+  color:#fff;font-size:11px;
+  padding:1px 8px;border-radius:10px;
+}
+.taolu-video-card.taolu-focus-main .taolu-video-thumb img{aspect-ratio:16/9;}
+.taolu-video-body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1;}
+.taolu-video-body h3{
+  font-size:15.5px;
+  line-height:1.5;
+  color:var(--taolu-navy);
+  margin-bottom:8px;
+  font-weight:700;
+}
+.taolu-video-card.taolu-focus-main .taolu-video-body h3{font-size:20px;}
+.taolu-video-body .taolu-video-desc{
+  font-size:13px;
+  color:var(--taolu-muted);
+  flex:1;
+  margin-bottom:14px;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+.taolu-video-meta{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px;
+  padding-top:12px;
+  border-top:1px dashed var(--taolu-line);
+  font-size:12px;
+  color:var(--taolu-muted);
+}
+.taolu-author-mini{display:flex;align-items:center;gap:7px;}
+.taolu-avatar{
+  width:26px;height:26px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:11.5px;font-weight:800;color:#fff;flex-shrink:0;
+  letter-spacing:.5px;
+}
+.taolu-actions{display:flex;gap:10px;align-items:center;}
+.taolu-act-btn{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:12px;color:var(--taolu-muted);
+  transition:color .2s,transform .2s;
+}
+.taolu-act-btn:hover{color:var(--taolu-coral-dark);transform:scale(1.08);}
+.taolu-act-btn .taolu-ico{font-size:13px;}
+.taolu-act-btn.taolu-liked{color:var(--taolu-coral-dark);font-weight:700;}
+.taolu-act-btn.taolu-saved{color:#1c8a83;font-weight:700;}
+
+/* ---------- TOPIC ---------- */
+.taolu-topics{background:#fff;border-top:1px solid var(--taolu-line);border-bottom:1px solid var(--taolu-line);}
+.taolu-topic-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+.taolu-topic-card{
+  position:relative;
+  border-radius:var(--taolu-radius);
+  overflow:hidden;
+  min-height:214px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:20px;
+  color:#fff;
+  box-shadow:0 8px 22px rgba(20,27,45,.10);
+  transition:transform .28s,box-shadow .28s;
+  isolation:isolate;
+}
+.taolu-topic-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(20,27,45,.2);}
+.taolu-topic-card img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;
+  transition:transform .5s;
+}
+.taolu-topic-card:hover img{transform:scale(1.08);}
+.taolu-topic-card::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(0deg,rgba(11,17,32,.9) 8%,rgba(11,17,32,.28) 62%,rgba(11,17,32,.08));
+}
+.taolu-topic-card .taolu-topic-status{
+  align-self:flex-start;
+  font-size:11px;font-weight:700;
+  padding:3px 10px;border-radius:16px;
+  margin-bottom:10px;
+  letter-spacing:.4px;
+}
+.taolu-topic-status.taolu-st-live{background:var(--taolu-coral);}
+.taolu-topic-status.taolu-st-soon{background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.4);}
+.taolu-topic-card h3{font-size:16px;line-height:1.45;margin-bottom:7px;}
+.taolu-topic-card p{font-size:12px;color:#d3dbea;line-height:1.6;}
+.taolu-topic-card .taolu-topic-num{
+  font-size:11px;color:var(--taolu-amber);margin-top:9px;font-weight:700;
+}
+
+/* ---------- CREATORS ---------- */
+.taolu-creators{background:var(--taolu-bg);}
+.taolu-creator-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.taolu-creator-card{
+  background:#fff;
+  border-radius:var(--taolu-radius);
+  padding:24px 22px;
+  border:1px solid var(--taolu-line);
+  display:flex;
+  gap:16px;
+  transition:transform .26s,box-shadow .26s,border-color .26s;
+}
+.taolu-creator-card:hover{transform:translateY(-4px);box-shadow:var(--taolu-shadow);border-color:#cdd6ea;}
+.taolu-creator-avatar{
+  width:56px;height:56px;border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;font-weight:800;color:#fff;flex-shrink:0;
+  letter-spacing:1px;
+}
+.taolu-creator-info{flex:1;min-width:0;}
+.taolu-creator-info h3{font-size:15.5px;color:var(--taolu-navy);margin-bottom:3px;}
+.taolu-creator-info .taolu-creator-field{
+  font-size:12px;color:var(--taolu-coral-dark);font-weight:600;margin-bottom:8px;
+}
+.taolu-creator-info p{
+  font-size:12.5px;color:var(--taolu-muted);line-height:1.65;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  margin-bottom:10px;
+}
+.taolu-creator-stats{display:flex;gap:16px;font-size:11.5px;color:#7a849c;}
+.taolu-creator-stats b{color:var(--taolu-navy);font-size:12.5px;}
+
+/* ---------- REVIEWS ---------- */
+.taolu-reviews{background:#fff;border-top:1px solid var(--taolu-line);}
+.taolu-review-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.taolu-review-card{
+  background:#f8f9fd;
+  border-radius:14px;
+  padding:20px;
+  border:1px solid var(--taolu-line);
+  position:relative;
+  transition:background .2s,border-color .2s;
+}
+.taolu-review-card:hover{background:#fff;border-color:#d3dbee;box-shadow:0 10px 24px rgba(20,27,45,.07);}
+.taolu-review-head{display:flex;align-items:center;gap:11px;margin-bottom:12px;}
+.taolu-review-head .taolu-avatar{width:34px;height:34px;font-size:13px;}
+.taolu-review-head b{font-size:13.5px;color:var(--taolu-navy);display:block;}
+.taolu-review-head span{font-size:11px;color:#8a93a8;}
+.taolu-review-card p{font-size:13px;color:#46506a;line-height:1.75;}
+.taolu-review-stars{color:var(--taolu-amber);font-size:12px;letter-spacing:1px;margin-top:10px;}
+
+/* ---------- INSPIRE ---------- */
+.taolu-inspire{
+  background:linear-gradient(135deg,#1b2a4a,#2b3d63 70%,#35507f);
+  color:#e9eefb;
+}
+.taolu-inspire-inner{max-width:1200px;margin:0 auto;padding:70px 24px;}
+.taolu-inspire .taolu-section-title h2{color:#fff;}
+.taolu-inspire .taolu-section-title p{color:#a9b6d3;}
+.taolu-inspire-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.taolu-inspire-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:14px;
+  padding:22px 20px;
+  transition:background .25s,border-color .25s,transform .25s;
+}
+.taolu-inspire-card:hover{background:rgba(255,255,255,.11);border-color:rgba(255,209,102,.5);transform:translateY(-4px);}
+.taolu-inspire-card .taolu-inspire-ico{
+  width:38px;height:38px;border-radius:11px;
+  background:rgba(255,209,102,.16);
+  color:var(--taolu-amber);
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;font-weight:800;margin-bottom:14px;
+}
+.taolu-inspire-card h3{font-size:15.5px;color:#fff;margin-bottom:8px;}
+.taolu-inspire-card p{font-size:12.8px;color:#b8c4de;line-height:1.7;}
+
+/* ---------- NEWS ---------- */
+.taolu-news{background:var(--taolu-bg);}
+.taolu-news-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:start;}
+.taolu-news-list{display:flex;flex-direction:column;gap:2px;}
+.taolu-news-item{
+  display:flex;gap:18px;
+  padding:18px 4px;
+  border-bottom:1px solid var(--taolu-line);
+  transition:padding-left .22s;
+}
+.taolu-news-item:hover{padding-left:8px;}
+.taolu-news-date{
+  flex-shrink:0;
+  width:60px;
+  text-align:center;
+  border-right:1px solid var(--taolu-line);
+  padding-right:14px;
+}
+.taolu-news-date b{display:block;font-size:20px;color:var(--taolu-navy);font-weight:800;line-height:1.1;}
+.taolu-news-date span{font-size:11px;color:#8a93a8;letter-spacing:.6px;}
+.taolu-news-body h3{font-size:14.5px;color:var(--taolu-ink);margin-bottom:5px;line-height:1.5;}
+.taolu-news-item:hover h3{color:var(--taolu-coral-dark);}
+.taolu-news-body p{font-size:12.5px;color:var(--taolu-muted);line-height:1.65;}
+.taolu-news-body .taolu-news-kind{
+  display:inline-block;
+  font-size:11px;padding:1px 8px;border-radius:10px;
+  background:#eef1f8;color:var(--taolu-navy);font-weight:600;
+  margin-top:7px;
+}
+.taolu-faq-list{display:flex;flex-direction:column;gap:10px;}
+.taolu-faq-item{
+  background:#fff;
+  border:1px solid var(--taolu-line);
+  border-radius:12px;
+  overflow:hidden;
+}
+.taolu-faq-item summary{
+  list-style:none;
+  cursor:pointer;
+  padding:15px 18px;
+  font-size:13.8px;
+  font-weight:600;
+  color:var(--taolu-navy);
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  transition:background .2s;
+}
+.taolu-faq-item summary::-webkit-details-marker{display:none;}
+.taolu-faq-item summary:hover{background:#f5f7fc;}
+.taolu-faq-item summary::after{
+  content:"+";
+  font-size:18px;color:var(--taolu-coral);
+  font-weight:400;transition:transform .2s;flex-shrink:0;
+}
+.taolu-faq-item[open] summary::after{content:"−";}
+.taolu-faq-item[open] summary{background:#f5f7fc;}
+.taolu-faq-item .taolu-faq-body{
+  padding:0 18px 16px;
+  font-size:13px;color:var(--taolu-muted);line-height:1.8;
+}
+
+/* ---------- JOIN / CTA ---------- */
+.taolu-cta{
+  background:linear-gradient(120deg,#ff5a5f,#ff8a6b 55%,#ffb45e);
+  color:#fff;
+  text-align:center;
+}
+.taolu-cta-inner{max-width:760px;margin:0 auto;padding:64px 24px;}
+.taolu-cta h2{font-size:29px;letter-spacing:.5px;margin-bottom:14px;}
+.taolu-cta p{font-size:14.5px;color:#fff0ec;margin-bottom:28px;line-height:1.8;}
+.taolu-cta-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;}
+.taolu-cta-btn{
+  background:#fff;
+  color:var(--taolu-coral-dark);
+  font-weight:800;
+  font-size:14.5px;
+  padding:12px 30px;
+  border-radius:28px;
+  transition:transform .2s,box-shadow .2s;
+  box-shadow:0 10px 26px rgba(180,50,40,.28);
+}
+.taolu-cta-btn:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(180,50,40,.36);}
+.taolu-cta-btn.taolu-cta-line{
+  background:transparent;color:#fff;
+  border:1.5px solid rgba(255,255,255,.7);
+  box-shadow:none;
+}
+.taolu-cta-btn.taolu-cta-line:hover{background:rgba(255,255,255,.16);}
+
+/* ---------- FOOTER ---------- */
+.taolu-footer{
+  background:#111a2c;
+  color:#93a0bb;
+  font-size:13px;
+}
+.taolu-footer-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:56px 24px 30px;
+}
+.taolu-footer-top{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1.2fr;
+  gap:36px;
+  padding-bottom:34px;
+  border-bottom:1px solid rgba(255,255,255,.09);
+}
+.taolu-footer-brand .taolu-logo-mark{width:34px;height:34px;}
+.taolu-footer-brand .taolu-logo-text b{color:#fff;font-size:15px;}
+.taolu-footer-brand .taolu-logo-text span{color:#76839e;}
+.taolu-footer-brand p{margin-top:14px;line-height:1.8;font-size:12.5px;color:#7d8aa6;}
+.taolu-footer-col h4{font-size:13.5px;color:#dde4f2;margin-bottom:14px;font-weight:700;letter-spacing:.5px;}
+.taolu-footer-col ul{display:flex;flex-direction:column;gap:9px;}
+.taolu-footer-col li{font-size:12.5px;}
+.taolu-footer-col a:hover{color:var(--taolu-amber);}
+.taolu-footer-bottom{
+  padding-top:22px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:12px;color:#66738e;
+}
+.taolu-footer-bottom .taolu-footer-links{display:flex;gap:18px;flex-wrap:wrap;}
+.taolu-footer-bottom a:hover{color:var(--taolu-amber);}
+
+/* ---------- TOAST / MODAL / TOP ---------- */
+.taolu-toast{
+  position:fixed;
+  left:50%;bottom:42px;
+  transform:translate(-50%,20px);
+  background:rgba(17,26,44,.94);
+  color:#fff;
+  font-size:13.5px;
+  padding:11px 22px;
+  border-radius:24px;
+  box-shadow:0 12px 30px rgba(0,0,0,.3);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .28s,transform .28s;
+  z-index:400;
+  max-width:86vw;
+  text-align:center;
+}
+.taolu-toast.taolu-show{opacity:1;transform:translate(-50%,0);}
+
+.taolu-modal-mask{
+  position:fixed;inset:0;
+  background:rgba(12,18,32,.62);
+  backdrop-filter:blur(3px);
+  display:none;
+  align-items:center;justify-content:center;
+  z-index:300;
+  padding:20px;
+}
+.taolu-modal-mask.taolu-show{display:flex;}
+.taolu-modal{
+  background:#fff;
+  border-radius:18px;
+  max-width:460px;
+  width:100%;
+  padding:28px 26px;
+  box-shadow:0 30px 70px rgba(0,0,0,.34);
+  animation:taoluPop .26s ease-out;
+}
+@keyframes taoluPop{from{transform:translateY(14px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+.taolu-modal h3{font-size:18px;color:var(--taolu-navy);margin-bottom:10px;}
+.taolu-modal p{font-size:13.5px;color:var(--taolu-muted);line-height:1.8;margin-bottom:18px;}
+.taolu-modal .taolu-modal-actions{display:flex;gap:12px;justify-content:flex-end;}
+.taolu-modal .taolu-modal-input{
+  width:100%;
+  border:1.5px solid var(--taolu-line);
+  border-radius:10px;
+  padding:10px 13px;
+  font-size:13.5px;
+  font-family:inherit;
+  margin-bottom:16px;
+  outline:none;
+  resize:vertical;
+  color:var(--taolu-ink);
+}
+.taolu-modal .taolu-modal-input:focus{border-color:var(--taolu-coral);}
+.taolu-modal-btn{
+  font-size:13.5px;font-weight:700;
+  padding:9px 20px;border-radius:22px;
+  background:#eef1f8;color:var(--taolu-navy);
+  transition:background .2s;
+}
+.taolu-modal-btn:hover{background:#e0e5f0;}
+.taolu-modal-btn.taolu-modal-primary{background:var(--taolu-coral);color:#fff;}
+.taolu-modal-btn.taolu-modal-primary:hover{background:var(--taolu-coral-dark);}
+
+.taolu-backtop{
+  position:fixed;
+  right:24px;bottom:26px;
+  width:44px;height:44px;
+  border-radius:14px;
+  background:var(--taolu-navy);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 24px rgba(20,27,45,.3);
+  opacity:0;pointer-events:none;
+  transform:translateY(12px);
+  transition:opacity .28s,transform .28s,background .2s;
+  z-index:200;
+}
+.taolu-backtop.taolu-show{opacity:1;pointer-events:auto;transform:translateY(0);}
+.taolu-backtop:hover{background:var(--taolu-coral-dark);}
+.taolu-backtop svg{width:18px;height:18px;}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1080px){
+  .taolu-hero h1{font-size:38px;}
+  .taolu-focus-grid{grid-template-columns:1fr 1fr;}
+  .taolu-focus-grid .taolu-focus-main{grid-column:span 2;}
+  .taolu-topic-grid{grid-template-columns:repeat(2,1fr);}
+  .taolu-creator-grid{grid-template-columns:repeat(2,1fr);}
+  .taolu-review-grid{grid-template-columns:repeat(2,1fr);}
+  .taolu-inspire-grid{grid-template-columns:1fr 1fr;}
+  .taolu-news-layout{grid-template-columns:1fr;gap:40px;}
+  .taolu-footer-top{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:880px){
+  .taolu-header-inner{gap:14px;}
+  .taolu-nav{
+    display:none;
+    position:absolute;
+    left:0;right:0;top:100%;
+    background:#fff;
+    flex-direction:column;
+    padding:12px 18px 18px;
+    gap:2px;
+    border-bottom:1px solid var(--taolu-line);
+    box-shadow:0 16px 30px rgba(20,27,45,.12);
+  }
+  .taolu-nav.taolu-nav-open{display:flex;}
+  .taolu-nav a{padding:11px 12px;}
+  .taolu-menu-toggle{display:flex;}
+  .taolu-header-tools .taolu-search-box{display:none;}
+  .taolu-hero-inner{grid-template-columns:1fr;gap:40px;padding-top:48px;}
+  .taolu-hero h1{font-size:34px;}
+  .taolu-hero-float.taolu-float-b{left:8px;}
+  .taolu-hero-float.taolu-float-a{right:8px;}
+  .taolu-about-grid{grid-template-columns:1fr;gap:34px;}
+  .taolu-about-feature{grid-template-columns:1fr;}
+}
+@media (max-width:640px){
+  .taolu-section{padding:52px 18px;scroll-margin-top:112px;}
+  .taolu-hero-inner{padding:40px 18px 56px;}
+  .taolu-hero h1{font-size:29px;}
+  .taolu-hero-stats{gap:22px;}
+  .taolu-hero-stats div b{font-size:22px;}
+  .taolu-section-title h2{font-size:21px;}
+  .taolu-focus-grid{grid-template-columns:1fr;}
+  .taolu-focus-grid .taolu-focus-main{grid-column:span 1;}
+  .taolu-topic-grid{grid-template-columns:1fr;gap:14px;}
+  .taolu-creator-grid{grid-template-columns:1fr;}
+  .taolu-review-grid{grid-template-columns:1fr;}
+  .taolu-inspire-grid{grid-template-columns:1fr;}
+  .taolu-footer-top{grid-template-columns:1fr;gap:26px;}
+  .taolu-news-item{gap:12px;}
+  .taolu-news-date{width:50px;padding-right:10px;}
+  .taolu-notice-bar{font-size:11.5px;gap:8px;padding:8px 12px;justify-content:flex-start;}
+  .taolu-header-tools .taolu-btn-primary{display:none;}
+  .taolu-cta-inner{padding:50px 18px;}
+  .taolu-cta h2{font-size:23px;}
+  .taolu-footer-inner{padding:40px 18px 26px;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="taolu-sticky-wrap">
+  <div class="taolu-notice-bar">
+    <span class="taolu-notice-tag">公告</span>
+    <span>第 128 期「反转三次才叫套路」每日调教赛题已发布，11 月 19 日 24:00 前上传即可进入本周榜单</span>
+    <a href="#taolu-news">查看更新 →</a>
+  </div>
+  <header class="taolu-header">
+    <div class="taolu-header-inner">
+      <a class="taolu-logo" href="#taolu-hero" aria-label="套路每日调教大赛官方网站首页">
+        <span class="taolu-logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5l11 7-11 7V5z" fill="#ffd166"/><circle cx="5" cy="5" r="2" fill="#ff5a5f"/></svg>
+        </span>
+        <span class="taolu-logo-text"><b>套路每日调教大赛</b><span>TAOLU DAILY LAB</span></span>
+      </a>
+      <nav class="taolu-nav" id="taoluNav" aria-label="主导航">
+        <a href="#taolu-hero" class="taolu-nav-active">首页</a>
+        <a href="#taolu-focus">焦点作品</a>
+        <a href="#taolu-topics">每日赛题</a>
+        <a href="#taolu-creators">创作者</a>
+        <a href="#taolu-inspire">创作灵感</a>
+        <a href="#taolu-news">官方动态</a>
+        <a href="#taolu-contact">参与投稿</a>
+      </nav>
+      <div class="taolu-header-tools">
+        <div class="taolu-search-box">
+          <input type="search" id="taoluSearchInput" placeholder="搜索赛题 / 作品 / 创作者" aria-label="站内搜索">
+          <button type="button" id="taoluSearchBtn" aria-label="搜索">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7" stroke="#fff"/><path d="M16.5 16.5L21 21" stroke="#fff"/></svg>
+          </button>
+          <div class="taolu-search-feedback" id="taoluSearchFeedback"></div>
+        </div>
+        <button type="button" class="taolu-btn-primary" id="taoluJoinBtn">报名参赛</button>
+        <button type="button" class="taolu-menu-toggle" id="taoluMenuToggle" aria-label="展开导航" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<section class="taolu-hero" id="taolu-hero">
+  <div class="taolu-hero-inner">
+    <div>
+      <div class="taolu-hero-badge"><span class="taolu-dot"></span>套路每日调教大赛 · 官方品牌站 · 每日更新</div>
+      <h1>套路每日调教大赛</h1>
+      <p class="taolu-hero-desc">一个把「反转」当作日常功课的原创视频社区。每天一个刁钻设定，每天一次集体调教，让套路在拆解与重构中变成真正的手艺。</p>
+      <div class="taolu-hero-actions">
+        <a class="taolu-btn-primary" href="#taolu-topics">查看今日赛题</a>
+        <a class="taolu-btn-ghost" href="#taolu-creators">认识创作者</a>
+      </div>
+      <div class="taolu-hero-stats">
+        <div><b>128<i>期</i></b><span>连续运营赛题</span></div>
+        <div><b>2.4<i>万</i></b><span>参赛原创作品</span></div>
+        <div><b>36<i>位</i></b><span>签约调教师</span></div>
+      </div>
+    </div>
+    <div class="taolu-hero-visual">
+      <div class="taolu-hero-cover">
+        <img alt="套路每日调教大赛第128期反转赛题主视觉封面" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400'%3E%3Cdefs%3E%3ClinearGradient id='bg128' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23131c30'/%3E%3Cstop offset='.6' stop-color='%2324395e'/%3E%3Cstop offset='1' stop-color='%23ff5a5f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='400' fill='url(%23bg128)'/%3E%3Cg opacity='.5'%3E%3Ccircle cx='520' cy='90' r='90' fill='none' stroke='%23ffd166' stroke-width='2'/%3E%3Ccircle cx='520' cy='90' r='140' fill='none' stroke='%23ffd166' stroke-width='1' opacity='.5'/%3E%3C/g%3E%3Cpath d='M60 320 Q140 210 220 300 T380 260 T560 330' fill='none' stroke='%234ecdc4' stroke-width='4' opacity='.8'/%3E%3Cg transform='translate(250 150)'%3E%3Crect x='0' y='0' width='140' height='86' rx='10' fill='rgba(255,255,255,.1)' stroke='rgba(255,255,255,.4)'/%3E%3Cpath d='M58 26l36 17-36 17z' fill='%23ffd166'/%3E%3C/g%3E%3Ctext x='60' y='70' font-family='sans-serif' font-size='30' font-weight='700' fill='%23ffffff'%3E%E5%8F%8D%E8%BD%AC%E4%B8%89%E6%AC%A1%3Ctspan fill='%23ffd166'%3E%E6%89%8D%E5%8F%AB%E5%A5%97%E8%B7%AF%3C/tspan%3E%3C/text%3E%3Ctext x='60' y='102' font-family='sans-serif' font-size='15' fill='%23c0cbe2'%3E%E7%AC%AC128%E6%9C%9F %C2%B7 11.19 %E9%99%90%E6%97%B6%E8%B5%9B%E9%A2%98%3C/text%3E%3C/svg%3E">
+        <span class="taolu-cover-label">今日主推</span>
+        <span class="taolu-cover-play"><svg viewBox="0 0 24 24" fill="#ff5a5f" aria-hidden="true"><path d="M8 5l12 7-12 7V5z"/></svg></span>
+        <div class="taolu-cover-cap">《电梯里第三次回头的人》· 本期最高分调教作品</div>
+      </div>
+      <div class="taolu-hero-float taolu-float-a">
+        <span class="taolu-float-ico taolu-f-coral">↑</span>
+        <div><b>+1,286 今日投稿</b><span>较昨日增长 12%</span></div>
+      </div>
+      <div class="taolu-hero-float taolu-float-b">
+        <span class="taolu-float-ico taolu-f-mint">★</span>
+        <div><b>9.4 分 口碑评分</b><span>来自 4,300 条社区评价</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="taolu-about" id="taolu-about">
+  <div class="taolu-about-inner">
+    <div class="taolu-about-grid">
+      <div class="taolu-about-left">
+        <h2>关于套路每日调教大赛<span>官方网站</span></h2>
+        <p>套路每日调教大赛是一个以「每日一题」为核心机制的原创视频内容社区。我们相信，套路本身并不可耻，可耻的是没有设计过的套路。平台每天发布一个限定情境，创作者用三到五分钟的影像，把平庸的桥段调教成让人拍腿的反转。</p>
+        <p>作为深耕短叙事垂直领域的品牌，我们为创作者提供赛题、剧本模板、剪辑流程与评审反馈的完整内容生态，也为企业与合作方提供真实可信的创意表达窗口。所有上架内容均为原创正版，采用高清标准审核，让每一帧都经得起反复回看。</p>
+        <div class="taolu-about-tags">
+          <span class="taolu-tag taolu-tag-hot">每日赛题</span>
+          <span class="taolu-tag">原创正版</span>
+          <span class="taolu-tag">高清品质</span>
+          <span class="taolu-tag">创作者社区</span>
+          <span class="taolu-tag">企业级内容生态</span>
+        </div>
+        <div class="taolu-about-quote">「套路不是终点，是让观众在第三次以为自己懂了的时候，突然发现自己什么都没懂。」—— 平台调教编辑部</div>
+      </div>
+      <div class="taolu-about-right">
+        <h3>关键词介绍与定位解析</h3>
+        <p>「套路」在大众语境里常带贬义，但在影像创作的现场，它其实是一套被反复验证过的叙事节拍。铺垫、钩子、误导、反转，缺一不可。套路每日调教大赛要做的，就是把「套路」从廉价技巧的泥潭里拽出来，放上工作台，让专业与热爱它的人一起拆解、打磨、重新组装。</p>
+        <p>「每日」意味着节奏。我们不追求一期封神的长篇巨制，而是把创作压力切成 24 小时可消化的小块：今天的赛题是「电梯里第三次回头的人」，明天可能是「外卖备注只写了三个字」。高频、短周期、可迭代，是这个平台对创作者最诚实的要求，也是内容生态保持新鲜的方式。</p>
+        <p>「调教」则指向方法与反馈。每期赛题都由平台签约的调教师给出结构示范，作品上传后开放社区互评，优秀作品会被拆条、复盘、逐帧标注。我们不做冷冰冰的评分机器，而是让每一次修改建议都落在具体的时间码上，让成长可见、可追溯、可陪伴。</p>
+        <p>垂直领域深耕六年，套路每日调教大赛已经形成稳定的内容节奏：每日赛题、每周榜单、每月复盘、每季企划。平台累计上线 128 期主题赛题，沉淀 2.4 万件原创作品，签约创作者覆盖编剧、剪辑、表演、摄影等多个工种，逐步构建起一套面向短叙事的创作方法论。</p>
+        <p>我们关心的是「可信」。所以每一件作品都要求在报名时登记创意来源，每一次票选都公开规则与数据，每一份榜单都保留历史版本。用户至上的原则，在这里被翻译成一句朴素的话：让好内容被看见，也让被看见的内容配得上。</p>
+        <p>作为一个持续运营的视频品牌官网，这里既是作品陈列厅，也是社区活动室。你可以在焦点作品里看最新一期的高分反转，可以在每日赛题里找今天的功课，也可以在创作灵感和投稿指南里找到从 0 到 1 的路径。无论你是路过的观众，还是准备上传第一支片子的新人，这里都留了位置。</p>
+        <ul class="taolu-about-feature">
+          <li><i>◆</i>每日更新赛题，24 小时闭环创作</li>
+          <li><i>◆</i>逐帧标注的复盘反馈，拒绝空洞点评</li>
+          <li><i>◆</i>高清正版审核，作品可长期归档</li>
+          <li><i>◆</i>多工种创作者矩阵，鼓励跨界协作</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="taolu-section taolu-focus" id="taolu-focus">
+  <div class="taolu-section-head">
+    <div class="taolu-section-title">
+      <span class="taolu-title-bar"></span>
+      <div>
+        <h2>焦点作品 · 本期高分解读</h2>
+        <p>第 128 期赛题优秀原创作品，含完整反转结构与逐帧复盘</p>
+      </div>
+    </div>
+    <a class="taolu-section-more" href="#taolu-topics">全部作品 <i>→</i></a>
+  </div>
+  <div class="taolu-focus-grid">
+
+    <article class="taolu-video-card taolu-focus-main">
+      <div class="taolu-video-thumb">
+        <img alt="作品《电梯里第三次回头的人》封面：深夜电梯与回头的身影" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23182240'/%3E%3Crect x='0' y='0' width='640' height='360' fill='url(%23g1)'/%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232a3d66' stop-opacity='.7'/%3E%3Cstop offset='1' stop-color='%230c1120'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg stroke='%23ffd166' stroke-width='2' opacity='.85'%3E%3Cpath d='M160 40v280M480 40v280M160 40h320'/%3E%3C/g%3E%3Cg fill='%23ff5a5f'%3E%3Ccircle cx='160' cy='180' r='9'/%3E%3Ccircle cx='480' cy='180' r='9'/%3E%3C/g%3E%3Cpath d='M300 200l0 -50 q0 -22 22 -22 l30 0 q22 0 22 22 l0 50' fill='none' stroke='%234ecdc4' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='335' cy='150' r='15' fill='%23f0f4ff'/%3E%3Ctext x='32' y='330' font-family='sans-serif' font-size='16' fill='%23a9b6d3'%3E%E7%AC%AC128%E6%9C%9F %C2%B7 %E5%8F%8D%E8%BD%AC%E7%BB%93%E6%9E%84 %C2%B7 05:12%3C/text%3E%3C/svg%3E">
+        <span class="taolu-thumb-tag">本期榜首</span>
+        <span class="taolu-thumb-time">05:12</span>
+      </div>
+      <div class="taolu-video-body">
+        <h3>电梯里第三次回头的人：把「巧合」调教成「必然」的三层结构</h3>
+        <p class="taolu-video-desc">一支在六平米空间内完成三次反转的短片。第一次回头是误会，第二次回头是善意，第三次回头才露出真正的叙事目的。全程仅有两个机位，却把空间压力拍得让人手心出汗。</p>
+        <div class="taolu-video-meta">
+          <div class="taolu-author-mini">
+            <span class="taolu-avatar" style="background:#ff5a5f;">陆</span>
+            <span>陆时叙</span>
+          </div>
+          <div class="taolu-actions">
+            <button type="button" class="taolu-act-btn" data-like><span class="taolu-ico">♡</span><span class="taolu-like-count">3,421</span></button>
+            <button type="button" class="taolu-act-btn" data-save><span class="taolu-ico">☆</span>收藏</button>
+            <button type="button" class="taolu-act-btn" data-share>分享</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="taolu-video-card">
+      <div class="taolu-video-thumb">
+        <img alt="作品《外卖备注只写了三个字》封面：餐盒与手写便签" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23f6efe2'/%3E%3Crect x='70' y='180' width='500' height='120' rx='14' fill='%23d9a35f'/%3E%3Crect x='90' y='196' width='460' height='88' rx='9' fill='%23f2d3a2'/%3E%3Cg stroke='%23a8743a' stroke-width='3'%3E%3Cpath d='M120 220h400M120 250h300'/%3E%3C/g%3E%3Crect x='220' y='52' width='200' height='110' rx='8' fill='%23fffdf6' stroke='%23c9b48f' stroke-width='2' transform='rotate(-3 320 107)'/%3E%3Ctext x='252' y='102' font-family='sans-serif' font-size='30' font-weight='700' fill='%23c0432f' transform='rotate(-3 320 107)'%3E%E5%B0%91%E5%86%B0%3C/text%3E%3Ctext x='252' y='136' font-family='sans-serif' font-size='16' fill='%238c7a5c' transform='rotate(-3 320 107)'%3E%E5%A4%9A%E8%B0%A2%EF%BC%8C%E4%BB%8A%E5%A4%A9%E5%BE%88%E7%B4%AF%3C/text%3E%3Ccircle cx='530' cy='80' r='34' fill='%234ecdc4' opacity='.6'/%3E%3C/svg%3E">
+        <span class="taolu-thumb-tag">口碑佳作</span>
+        <span class="taolu-thumb-time">03:48</span>
+      </div>
+      <div class="taolu-video-body">
+        <h3>外卖备注只写了三个字，骑手在楼下站了七分钟</h3>
+        <p class="taolu-video-desc">用一条备注串起三个陌生人的夜晚。没有台词冲突，全靠镜头外的沉默完成反转，适合作为「情绪留白」的调教范本。</p>
+        <div class="taolu-video-meta">
+          <div class="taolu-author-mini">
+            <span class="taolu-avatar" style="background:#d9a35f;">周</span>
+            <span>周小满</span>
+          </div>
+          <div class="taolu-actions">
+            <button type="button" class="taolu-act-btn" data-like><span class="taolu-ico">♡</span><span class="taolu-like-count">2,087</span></button>
+            <button type="button" class="taolu-act-btn" data-save><span class="taolu-ico">☆</span>收藏</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="taolu-video-card">
+      <div class="taolu-video-thumb">
+        <img alt="作品《相亲对象和我背了同一份攻略》封面：" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23e9eefb'/%3E%3Ccircle cx='210' cy='180' r='86' fill='%23c7d4f0'/%3E%3Ccircle cx='430' cy='180' r='86' fill='%23f3c9c9'/%3E%3Cpath d='M240 180a70 70 0 0 1 160 0' fill='none' stroke='%2333507f' stroke-width='4' stroke-dasharray='9 8'/%3E%3Crect x='292' y='96' width='56' height='76' rx='7' fill='%23fffdf6' stroke='%2333507f' stroke-width='2' transform='rotate(8 320 134)'/%3E%3Cg stroke='%2333507f' stroke-width='2' opacity='.7'%3E%3Cpath d='M303 118h34M303 132h34M303 146h22'/%3E%3C/g%3E%3Ctext x='200' y='316' font-family='sans-serif' font-size='15' fill='%235d6880'%3E%E5%90%8C%E4%B8%80%E4%BB%BD%E6%94%BB%E7%95%A5 %C2%B7 %E5%8F%8C%E4%BA%BA%E5%AF%B9%E8%AF%9D%3C/text%3E%3C/svg%3E">
+        <span class="taolu-thumb-tag">新人黑马</span>
+        <span class="taolu-thumb-time">04:26</span>
+      </div>
+      <div class="taolu-video-body">
+        <h3>相亲对象和我背了同一份攻略，谁先笑场谁输</h3>
+        <p class="taolu-video-desc">两位创作者把同一份「聊天攻略」倒背如流，然后在餐厅里互相拆穿。节奏轻快，反转藏在服务员的第三句话里。</p>
+        <div class="taolu-video-meta">
+          <div class="taolu-author-mini">
+            <span class="taolu-avatar" style="background:#33507f;">北</span>
+            <span>北巷七号</span>
+          </div>
+          <div class="taolu-actions">
+            <button type="button" class="taolu-act-btn" data-like><span class="taolu-ico">♡</span><span class="taolu-like-count">1,764</span></button>
+            <button type="button" class="taolu-act-btn" data-save><span class="taolu-ico">☆</span>收藏</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="taolu-video-card">
+      <div class="taolu-video-thumb">
+        <img alt="作品《会议室里没人敢说的那句话》封面：长桌与投影仪光" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23222b3f'/%3E%3Crect x='0' y='250' width='640' height='110' fill='%23d9dde8'/%3E%3Crect x='120' y='180' width='400' height='34' rx='6' fill='%23efe6d2'/%3E%3Cg fill='%233a4a6b'%3E%3Crect x='150' y='120' width='46' height='60' rx='8'/%3E%3Crect x='240' y='120' width='46' height='60' rx='8'/%3E%3Crect x='330' y='120' width='46' height='60' rx='8'/%3E%3Crect x='420' y='120' width='46' height='60' rx='8'/%3E%3C/g%3E%3Crect x='470' y='30' width='120' height='80' rx='6' fill='%23ffd166' opacity='.28'/%3E%3Cpath d='M470 110l60 -80M530 110l60 -80' stroke='%23ffd166' stroke-width='2' opacity='.4'/%3E%3Ctext x='150' y='324' font-family='sans-serif' font-size='15' fill='%235d6880'%3E%E8%81%8C%E5%9C%BA %C2%B7 %E7%BE%A4%E5%83%8F %C2%B7 %E5%86%B7%E5%B9%BD%E9%BB%98%3C/text%3E%3C/svg%3E">
+        <span class="taolu-thumb-tag">职场观察</span>
+        <span class="taolu-thumb-time">06:02</span>
+      </div>
+      <div class="taolu-video-body">
+        <h3>会议室里没人敢说的那句话，被实习生写进了周报</h3>
+        <p class="taolu-video-desc">一场关于「谁先说真话」的静默对峙。镜头始终停在桌沿以下，声音却把所有权力关系交代得干干净净。</p>
+        <div class="taolu-video-meta">
+          <div class="taolu-author-mini">
+            <span class="taolu-avatar" style="background:#4ecdc4;">陈</span>
+            <span>陈默不默</span>
+          </div>
+          <div class="taolu-actions">
+            <button type="button" class="taolu-act-btn" data-like><span class="taolu-ico">♡</span><span class="taolu-like-count">2,953</span></button>
+            <button type="button" class="taolu-act-btn" data-save><span class="taolu-ico">☆</span>收藏</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="taolu-video-card">
+      <div class="taolu-video-thumb">
+        <img alt="作品《便利店凌晨两点的第 3 位客人》封面：货架与冷柜灯" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23203238'/%3E%3Crect x='40' y='60' width='560' height='240' fill='%23152a30'/%3E%3Cg fill='%23ffd166' opacity='.85'%3E%3Crect x='70' y='90' width='150' height='68' rx='5'/%3E%3Crect x='250' y='90' width='150' height='68' rx='5' opacity='.6'/%3E%3Crect x='430' y='90' width='150' height='68' rx='5' opacity='.35'/%3E%3C/g%3E%3Cg stroke='%234ecdc4' stroke-width='3' opacity='.8'%3E%3Cpath d='M70 210h510M70 260h510'/%3E%3C/g%3E%3Ccircle cx='500' cy='200' r='26' fill='%23ff5a5f'/%3E%3Ctext x='46' y='336' font-family='sans-serif' font-size='15' fill='%23a9b6d3'%3E%E5%9F%8E%E5%B8%82%E6%8E%A2%E7%B4%A2 %C2%B7 %E5%A4%9C%E7%8F%AD %C2%B7 04:40%3C/text%3E%3C/svg%3E">
+        <span class="taolu-thumb-tag">城市观察</span>
+        <span class="taolu-thumb-time">04:40</span>
+      </div>
+      <div class="taolu-video-body">
+        <h3>便利店凌晨两点的第 3 位客人，总会买同一种关东煮</h3>
+        <p class="taolu-video-desc">用一份关东煮的配料变化，记录三个月的城市夜晚。没有一次刻意煽情，但最后一格冷柜灯灭掉时很难不鼻酸。</p>
+        <div class="taolu-video-meta">
+          <div class="taolu-author-mini">
+            <span class="taolu-avatar" style="background:#2b3d63;">林</span>
+            <span>林间放映</span>
+          </div>
+          <div class="taolu-actions">
+            <button type="button" class="taolu-act-btn" data-like><span class="taolu-ico">♡</span><span class="taolu-like-count">1,318</span></button>
+            <button type="button" class="taolu-act-btn" data-save><span class="taolu-ico">☆</span>收藏</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="taolu-section taolu-topics" id="taolu-topics">
+  <div class="taolu-section-head">
+    <div class="taolu-section-title">
+      <span class="taolu-title-bar"></span>
+      <div>
+        <h2>每日赛题 · 正在进行的企划</h2>
+        <p>围绕套路的四种调教方向，参与即计入本周榜单</p>
+      </div>
+    </div>
+    <a class="taolu-section-more" href="#taolu-contact">投稿入口 <i>→</i></a>
+  </div>
+  <div class="taolu-topic-grid">
+
+    <article class="taolu-topic-card">
+      <img alt="企划《反转三次才叫套路》专题封面：层叠箭头图形" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 300'%3E%3Crect width='420' height='300' fill='%23291f3d'/%3E%3Cg transform='translate(110 60)'%3E%3Cpath d='M100 0l70 56h-44v52h-52V56H30z' fill='%23ff5a5f' opacity='.95'/%3E%3Cpath d='M100 70l70 56h-44v52h-52v-52H30z' fill='%23ffd166' opacity='.8' transform='translate(0 48)'/%3E%3C/g%3E%3Ccircle cx='60' cy='240' r='26' fill='%234ecdc4' opacity='.7'/%3E%3C/svg%3E">
+      <span class="taolu-topic-status taolu-st-live">进行中 · 今日截止</span>
+      <h3>反转三次才叫套路</h3>
+      <p>限定单一空间，必须完成三次明确反转，第三次需推翻前两次的全部假设。</p>
+      <span class="taolu-topic-num">已收 1,286 件 · 剩余 9 小时</span>
+    </article>
+
+    <article class="taolu-topic-card">
+      <img alt="企划《一句话就能改命》专题封面：对白气泡与声波" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 300'%3E%3Crect width='420' height='300' fill='%23152b2b'/%3E%3Crect x='60' y='70' width='220' height='96' rx='18' fill='%23e9f7f5'/%3E%3Cpath d='M110 166l-14 34 42-34z' fill='%23e9f7f5'/%3E%3Cg stroke='%234ecdc4' stroke-width='5' stroke-linecap='round'%3E%3Cpath d='M96 118h148'/%3E%3Cpath d='M96 94h96'/%3E%3C/g%3E%3Cg fill='%23ffd166'%3E%3Crect x='300' y='110' width='8' height='40' rx='4'/%3E%3Crect x='316' y='90' width='8' height='80' rx='4'/%3E%3Crect x='332' y='120' width='8' height='20' rx='4'/%3E%3C/g%3E%3C/svg%3E">
+      <span class="taolu-topic-status taolu-st-live">长期企划</span>
+      <h3>一句话就能改命</h3>
+      <p>全片只允许一句台词，所有信息必须由这句台词与画面关系共同完成。</p>
+      <span class="taolu-topic-num">已收 864 件 · 每周五结算</span>
+    </article>
+
+    <article class="taolu-topic-card">
+      <img alt="企划《把老桥段拍出新证据》专题封面：胶片与放大镜" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 300'%3E%3Crect width='420' height='300' fill='%233b2f24'/%3E%3Crect x='70' y='86' width='180' height='126' rx='6' fill='%23e7d3b3'/%3E%3Cg fill='%233b2f24'%3E%3Crect x='70' y='86' width='180' height='18'/%3E%3Crect x='70' y='194' width='180' height='18'/%3E%3C/g%3E%3Ccircle cx='296' cy='166' r='46' fill='none' stroke='%23ff5a5f' stroke-width='8'/%3E%3Cpath d='M328 200l40 40' stroke='%23ff5a5f' stroke-width='10' stroke-linecap='round'/%3E%3Cg fill='%233b2f24' opacity='.55'%3E%3Crect x='96' y='116' width='128' height='10' rx='5'/%3E%3Crect x='96' y='140' width='96' height='10' rx='5'/%3E%3Crect x='96' y='164' width='112' height='10' rx='5'/%3E%3C/g%3E%3C/svg%3E">
+      <span class="taolu-topic-status taolu-st-soon">下周开启</span>
+      <h3>把老桥段拍出新证据</h3>
+      <p>从经典套路库里抽签，用当代拍法重新举证，比拼的是翻新而非推翻。</p>
+      <span class="taolu-topic-num">预约提醒 2,410 人</span>
+    </article>
+
+    <article class="taolu-topic-card">
+      <img alt="企划《失败的反转也算数》专题封面：折断的箭头与星星" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 300'%3E%3Crect width='420' height='300' fill='%23212b45'/%3E%3Cpath d='M60 210l90-90 56 56 70-84' fill='none' stroke='%23ffd166' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M300 96l40 0 0 40' fill='none' stroke='%23ff5a5f' stroke-width='7' stroke-linecap='round'/%3E%3Ccircle cx='150' cy='248' r='20' fill='%234ecdc4' opacity='.6'/%3E%3Cpath d='M238 60l12 26 28 3-21 19 6 28-25-15-25 15 6-28-21-19 28-3z' fill='%23ff5a5f' opacity='.8' transform='translate(60 -20) scale(.7)'/%3E%3C/svg%3E">
+      <span class="taolu-topic-status taolu-st-live">口碑话题</span>
+      <h3>失败的反转也算数</h3>
+      <p>专为翻车现场开设的企划。鼓励上传未成立的反转并附复盘笔记，共同研究失效原因。</p>
+      <span class="taolu-topic-num">已收 507 件 · 复盘笔记 213 篇</span>
+    </article>
+
+  </div>
+</section>
+
+<section class="taolu-section taolu-creators" id="taolu-creators">
+  <div class="taolu-section-head">
+    <div class="taolu-section-title">
+      <span class="taolu-title-bar"></span>
+      <div>
+        <h2>创作者矩阵 · 正在调教套路的人</h2>
+        <p>覆盖编剧、剪辑、表演与摄影，跨界协作是这个社区的传统</p>
+      </div>
+    </div>
+    <a class="taolu-section-more" href="#taolu-contact">成为创作者 <i>→</i></a>
+  </div>
+  <div class="taolu-creator-grid">
+
+    <article class="taolu-creator-card">
+      <span class="taolu-creator-avatar" style="background:linear-gradient(135deg,#ff5a5f,#ff9a76);">陆</span>
+      <div class="taolu-creator-info">
+        <h3>陆时叙</h3>
+        <div class="taolu-creator-field">结构型编剧 · 三幕反转专家</div>
+        <p>擅长在极小空间里压缩叙事信息，代表作《电梯里第三次回头的人》。习惯先写结局再倒推铺垫。</p>
+        <div class="taolu-creator-stats"><span><b>86</b> 作品</span><span><b>12.4万</b> 关注</span></div>
+      </div>
+    </article>
+
+    <article class="taolu-creator-card">
+      <span class="taolu-creator-avatar" style="background:linear-gradient(135deg,#4ecdc4,#2f9e94);">周</span>
+      <div class="taolu-creator-info">
+        <h3>周小满</h3>
+        <div class="taolu-creator-field">情绪留白 · 生活观察</div>
+        <p>善于用环境音与空镜讲完台词说不清的部分。长期记录城市夜班人群，作品节奏偏慢但后劲很足。</p>
+        <div class="taolu-creator-stats"><span><b>64</b> 作品</span><span><b>8.7万</b> 关注</span></div>
+      </div>
+    </article>
+
+    <article class="taolu-creator-card">
+      <span class="taolu-creator-avatar" style="background:linear-gradient(135deg,#33507f,#5b7cba);">北</span>
+      <div class="taolu-creator-info">
+        <h3>北巷七号</h3>
+        <div class="taolu-creator-field">轻喜剧 · 双人对话</div>
+        <p>两个人、一张桌、一份攻略，就能撑起一整支片子。最擅长把尴尬拍成可爱，笑点密度常年在线。</p>
+        <div class="taolu-creator-stats"><span><b>103</b> 作品</span><span><b>15.2万</b> 关注</span></div>
+      </div>
+    </article>
+
+    <article class="taolu-creator-card">
+      <span class="taolu-creator-avatar" style="background:linear-gradient(135deg,#d9a35f,#b87c37);">陈</span>
+      <div class="taolu-creator-info">
+        <h3>陈默不默</h3>
+        <div class="taolu-creator-field">职场群像 · 冷幽默</div>
+        <p>长期混迹会议室与茶水间，练就一身用桌沿以下镜头讲权力关系的本事。评论区常被上班族占满。</p>
+        <div class="taolu-creator-stats"><span><b>47</b> 作品</span><span><b>6.9万</b> 关注</span></div>
+      </div>
+    </article>
+
+    <article class="taolu-creator-card">
+      <span class="taolu-creator-avatar" style="background:linear-gradient(135deg,#8a6cd6,#6247ad);">林</span>
+      <div class="taolu-creator-info">
+        <h3>林间放映</h3>
+        <div class="taolu-creator-field">城市探索 · 夜行影像</div>
+        <p>把便利店、天桥和末班公交拍成了城市标本。作品多为系列更新，被社区称为「深夜导航员」。</p>
+        <div class="taolu-creator-stats"><span><b>72</b> 作品</span><span><b>9.3万</b> 关注</span></div>
+      </div>
+    </article>
+
+    <article class="taolu-creator-card">
+      <span class="taolu-creator-avatar" style="background:linear-gradient(135deg,#e2607c,#c23a63);">季</span>
+      <div class="taolu-creator-info">
+        <h3>季有回响</h3>
+        <div class="taolu-creator-field">声音设计 · 后期调教</div>
+        <p>专注把反转藏在声音里：一句被盖住的旁白、一阵突然停下的雨。是社区最抢手的后期合作对象。</p>
+        <div class="taolu-creator-stats"><span><b>58</b> 作品</span><span><b>7.1万</b> 关注</span></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="taolu-section taolu-reviews" id="taolu-reviews">
+  <div class="taolu-section-head">
+    <div class="taolu-section-title">
+      <span class="taolu-title-bar"></span>
+      <div>
+        <h2>社区评价 · 他们这样说</h2>
+        <p>来自参赛者、观众与合作方的真实反馈，语气各异但都具体</p>
+      </div>
+    </div>
+  </div>
+  <div class="taolu-review-grid">
+
+    <article class="taolu-review-card">
+      <div class="taolu-review-head">
+        <span class="taolu-avatar" style="background:#ff5a5f;">许</span>
+        <div><b>许棠</b><span>连续参赛 41 期</span></div>
+      </div>
+      <p>第一次认真写反转，是被每日赛题逼出来的。每天一个限定条件，反而让我把偷懒的老毛病治好了。最有用的是逐帧复盘，哪一秒铺垫不够都标出来了。</p>
+      <div class="taolu-review-stars">★★★★★</div>
+    </article>
+
+    <article class="taolu-review-card">
+      <div class="taolu-review-head">
+        <span class="taolu-avatar" style="background:#4ecdc4;">何</span>
+        <div><b>何一舟</b><span>影视专业学生</span></div>
+      </div>
+      <p>我们小组把平台的复盘笔记当教材用。同样的六平米空间，不同人的调度方案差得离谱，这种横向对比在课堂上是看不到的。</p>
+      <div class="taolu-review-stars">★★★★★</div>
+    </article>
+
+    <article class="taolu-review-card">
+      <div class="taolu-review-head">
+        <span class="taolu-avatar" style="background:#d9a35f;">顾</span>
+        <div><b>顾南</b><span>普通观众</span></div>
+      </div>
+      <p>我本来只是路过，结果一期一期追下来成了固定作息。喜欢这个社区的一点是，不拿廉价的惊吓当反转，每次拆解都讲得出道理。</p>
+      <div class="taolu-review-stars">★★★★☆</div>
+    </article>
+
+    <article class="taolu-review-card">
+      <div class="taolu-review-head">
+        <span class="taolu-avatar" style="background:#8a6cd6;">苏</span>
+        <div><b>苏念</b><span>品牌内容合作方</span></div>
+      </div>
+      <p>合作过两次联名赛题。流程比想象中清楚，从需求沟通到作品审核都有明确节点，最后的成片质量也稳。对品牌来说是个难得的、不冒犯观众的入口。</p>
+      <div class="taolu-review-stars">★★★★★</div>
+    </article>
+
+    <article class="taolu-review-card">
+      <div class="taolu-review-head">
+        <span class="taolu-avatar" style="background:#e2607c;">程</span>
+        <div><b>程野</b><span>新人创作者</span></div>
+      </div>
+      <p>第一次投稿的片子只拿了 6.1 分，但收到了 17 条具体建议，其中一条直接救了我后面的剪辑。能把批评写得这么有用的社区不多。</p>
+      <div class="taolu-review-stars">★★★★☆</div>
+    </article>
+
+    <article class="taolu-review-card">
+      <div class="taolu-review-head">
+        <span class="taolu-avatar" style="background:#33507f;">白</span>
+        <div><b>白露</b><span>编剧从业者</span></div>
+      </div>
+      <p>平台的赛题设置越来越像正经的写作训练了。尤其「一句话就能改命」那期，限制越狠，越能看出谁真的懂叙事。值得长期关注。</p>
+      <div class="taolu-review-stars">★★★★★</div>
+    </article>
+
+  </div>
+</section>
+
+<section class="taolu-inspire" id="taolu-inspire">
+  <div class="taolu-inspire-inner">
+    <div class="taolu-section-head">
+      <div class="taolu-section-title">
+        <span class="taolu-title-bar"></span>
+        <div>
+          <h2>创作灵感 · 调教工具箱</h2>
+          <p>从选题到剪辑的工作流建议，来自平台编辑部的日常积累</p>
+        </div>
+      </div>
+    </div>
+    <div class="taolu-inspire-grid">
+
+      <article class="taolu-inspire-card">
+        <div class="taolu-inspire-ico">01</div>
+        <h3>先写「第三次」再补前面两次</h3>
+        <p>多数反转失败在铺垫用力过猛。试着从最终反转倒推：观众需要相信什么、怀疑什么、忽略什么，再决定前面两幕该藏哪条信息。</p>
+      </article>
+
+      <article class="taolu-inspire-card">
+        <div class="taolu-inspire-ico">02</div>
+        <h3>把台词删掉一半，看看还成立吗</h3>
+        <p>声音设计是套路的第二层皮肤。一段被环境音盖住的对话，往往比完整说出口更有说服力。删台词是成本最低的调教练习。</p>
+      </article>
+
+      <article class="taolu-inspire-card">
+        <div class="taolu-inspire-ico">03</div>
+        <h3>给每个道具写一份履历</h3>
+        <p>关东煮、便签、电梯按钮，只要它有来历，反转就有落点。道具不是背景，是提前埋好的证据，写清它为什么在这里。</p>
+      </article>
+
+      <article class="taolu-inspire-card">
+        <div class="taolu-inspire-ico">04</div>
+        <h3>在 90 秒处埋一个假结局</h3>
+        <p>让观众以为结束了，是制造第三次反转的经典手法。关键是假结局要足够完整，完整到观众愿意松一口气。</p>
+      </article>
+
+      <article class="taolu-inspire-card">
+        <div class="taolu-inspire-ico">05</div>
+        <h3>把失败版本也放进来</h3>
+        <p>平台的「失败的反转也算数」企划就是为了这个。翻车现场往往比成功案例更能说明结构问题，附上复盘笔记，收获会翻倍。</p>
+      </article>
+
+      <article class="taolu-inspire-card">
+        <div class="taolu-inspire-ico">06</div>
+        <h3>找不同工种的人读一遍你的分镜</h3>
+        <p>编剧看动机，剪辑看节奏，表演看反应点，摄影看空间关系。一次跨工种互读，抵得上三版修改。</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="taolu-section taolu-news" id="taolu-news">
+  <div class="taolu-section-head">
+    <div class="taolu-section-title">
+      <span class="taolu-title-bar"></span>
+      <div>
+        <h2>官方动态与常见问题</h2>
+        <p>平台发布、企划日程与参赛须知，重要信息都在这里</p>
+      </div>
+    </div>
+  </div>
+  <div class="taolu-news-layout">
+
+    <div>
+      <div class="taolu-news-list">
+        <article class="taolu-news-item">
+          <div class="taolu-news-date"><b>19</b><span>NOV</span></div>
+          <div class="taolu-news-body">
+            <h3>第 128 期赛题「反转三次才叫套路」正式发布</h3>
+            <p>本期限定单一室内空间，需在五分钟内完成三次明确反转，第三次反转须推翻前两次的全部假设。截至今日 24:00 关闭投稿。</p>
+            <span class="taolu-news-kind">官方发布</span>
+          </div>
+        </article>
+        <article class="taolu-news-item">
+          <div class="taolu-news-date"><b>17</b><span>NOV</span></div>
+          <div class="taolu-news-body">
+            <h3>「失败的反转也算数」企划开通复盘笔记专区</h3>
+            <p>上传未成立的反转作品时，可同步提交复盘笔记；优质笔记将被编入平台月度复盘手册，并标注作者署名。</p>
+            <span class="taolu-news-kind">内容生态</span>
+          </div>
+        </article>
+        <article class="taolu-news-item">
+          <div class="taolu-news-date"><b>14</b><span>NOV</span></div>
+          <div class="taolu-news-body">
+            <h3>第 127 期周榜公布，三位新人创作者进入前十</h3>
+            <p>本期共收到 1,412 件投稿，口碑评分均值 8.2。完整榜单已同步至焦点作品页，评审意见对全部参赛者开放。</p>
+            <span class="taolu-news-kind">榜单动态</span>
+          </div>
+        </article>
+        <article class="taolu-news-item">
+          <div class="taolu-news-date"><b>10</b><span>NOV</span></div>
+          <div class="taolu-news-body">
+            <h3>调教师公开课第四季开放报名，共 8 节直播</h3>
+            <p>课程覆盖结构设计、声音叙事与剪辑节奏，面向所有注册创作者免费开放，报名后在个人中心查看课表。</p>
+            <span class="taolu-news-kind">活动报名</span>
+          </div>
+        </article>
+        <article class="taolu-news-item">
+          <div class="taolu-news-date"><b>06</b><span>NOV</span></div>
+          <div class="taolu-news-body">
+            <h3>平台上线高清归档功能，作品可长期保存原始素材</h3>
+            <p>投稿作品审核通过后，可申请高清版本归档；归档内容仅作者与评审可见，不影响社区公示版本。</p>
+            <span class="taolu-news-kind">功能更新</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="taolu-faq-list">
+      <details class="taolu-faq-item" open>
+        <summary>每日赛题必须在当天完成吗？</summary>
+        <div class="taolu-faq-body">赛题以发布时刻起算 24 小时内投稿有效，超时作品会自动进入下一期的新人区，不参与当日榜单，但仍可被社区浏览与点评。</div>
+      </details>
+      <details class="taolu-faq-item">
+        <summary>投稿作品有什么格式与时长要求？</summary>
+        <div class="taolu-faq-body">建议 16:9 横版，时长 3 至 8 分钟，分辨率不低于 1080P。所有作品需为原创或已获授权，提交时须登记创意来源与素材说明。</div>
+      </details>
+      <details class="taolu-faq-item">
+        <summary>非专业创作者可以参加吗？</summary>
+        <div class="taolu-faq-body">可以。平台设有新人区与首次投稿引导，从脚本模板到剪辑检查表都有现成材料。我们更看重结构是否讲通，而不是设备是否昂贵。</div>
+      </details>
+      <details class="taolu-faq-item">
+        <summary>作品被多次点评，会影响评分吗？</summary>
+        <div class="taolu-faq-body">不会直接计入分数。评分由评审与社区票选共同构成，点评仅作为反馈参考。我们鼓励具体、可执行的建议，反对人身攻击。</div>
+      </details>
+      <details class="taolu-faq-item">
+        <summary>可以和企业合作定制赛题吗？</summary>
+        <div class="taolu-faq-body">可以。合作赛题会明确标注赞助信息，评审标准与普通赛题一致，品牌不得干预作品内容评分，这是平台对社区的基本承诺。</div>
+      </details>
+      <details class="taolu-faq-item">
+        <summary>如何申请成为签约创作者？</summary>
+        <div class="taolu-faq-body">连续参加四期且口碑评分稳定在 8.0 以上，可在个人中心提交签约申请。编辑部会结合作品质量、更新稳定度与社区协作记录综合评估。</div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<section class="taolu-cta" id="taolu-contact">
+  <div class="taolu-cta-inner">
+    <h2>今天就交一份套路的作业</h2>
+    <p>不必等到准备好。选一个赛题，写一个反转，上传，然后接受一次具体的调教。套路每日调教大赛的下一期榜单里，可以有你的名字。</p>
+    <div class="taolu-cta-actions">
+      <button type="button" class="taolu-cta-btn" id="taoluCtaJoin">立即报名参赛</button>
+      <button type="button" class="taolu-cta-btn taolu-cta-line" id="taoluCtaSubmit">投稿与合作咨询</button>
+    </div>
+  </div>
+</section>
+
+<footer class="taolu-footer">
+  <div class="taolu-footer-inner">
+    <div class="taolu-footer-top">
+      <div class="taolu-footer-brand">
+        <div class="taolu-logo">
+          <span class="taolu-logo-mark">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5l11 7-11 7V5z" fill="#ffd166"/><circle cx="5" cy="5" r="2" fill="#ff5a5f"/></svg>
+          </span>
+          <span class="taolu-logo-text"><b>套路每日调教大赛</b><span>TAOLU DAILY LAB</span></span>
+        </div>
+        <p>套路每日调教大赛官方网站 · 原创短叙事视频社区。每日一题，持续运营，专注把套路调教成专业手艺，为创作者与企业搭建高品质内容生态。</p>
+      </div>
+      <div class="taolu-footer-col">
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#taolu-hero">首页</a></li>
+          <li><a href="#taolu-focus">焦点作品</a></li>
+          <li><a href="#taolu-topics">每日赛题</a></li>
+          <li><a href="#taolu-creators">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div class="taolu-footer-col">
+        <h4>关于平台</h4>
+        <ul>
+          <li><a href="#taolu-about">品牌故事</a></li>
+          <li><a href="#taolu-inspire">创作灵感</a></li>
+          <li><a href="#taolu-news">官方动态</a></li>
+          <li><a href="#taolu-reviews">社区评价</a></li>
+        </ul>
+      </div>
+      <div class="taolu-footer-col">
+        <h4>参与与合作</h4>
+        <ul>
+          <li><a href="#taolu-contact">报名参赛</a></li>
+          <li><a href="#taolu-contact">投稿指南</a></li>
+          <li><a href="#taolu-contact">企业联名赛题</a></li>
+          <li><a href="#taolu-contact">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="taolu-footer-bottom">
+      <span>© 2026 套路每日调教大赛 · 企业版权所有 · 持续运营中 · 所有内容为原创正版</span>
+      <div class="taolu-footer-links">
+        <a href="#taolu-news">用户协议</a>
+        <a href="#taolu-news">隐私说明</a>
+        <a href="#taolu-news">内容规范</a>
+        <a href="#taolu-contact">意见反馈</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button type="button" class="taolu-backtop" id="taoluBacktop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="taolu-toast" id="taoluToast" role="status" aria-live="polite"></div>
+
+<div class="taolu-modal-mask" id="taoluModalMask">
+  <div class="taolu-modal" id="taoluModal" role="dialog" aria-modal="true" aria-labelledby="taoluModalTitle">
+    <h3 id="taoluModalTitle">报名参赛</h3>
+    <p id="taoluModalDesc">填写你的创作者昵称与联系方式，编辑部会在一个工作日内发送本期赛题包与投稿入口。</p>
+    <input class="taolu-modal-input" type="text" id="taoluModalName" placeholder="创作者昵称" aria-label="创作者昵称">
+    <textarea class="taolu-modal-input" id="taoluModalNote" rows="3" placeholder="想参加的赛题或想聊的合作方向（选填）" aria-label="补充说明"></textarea>
+    <div class="taolu-modal-actions">
+      <button type="button" class="taolu-modal-btn" id="taoluModalCancel">稍后再说</button>
+      <button type="button" class="taolu-modal-btn taolu-modal-primary" id="taoluModalConfirm">提交报名</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toast = document.getElementById('taoluToast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('taolu-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('taolu-show'); }, 2400);
+  }
+
+  /* 移动端导航折叠 */
+  var menuToggle = document.getElementById('taoluMenuToggle');
+  var nav = document.getElementById('taoluNav');
+  if(menuToggle && nav){
+    menuToggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('taolu-nav-open');
+      menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.classList.remove('taolu-nav-open');
+        menuToggle.setAttribute('aria-expanded','false');
+        nav.querySelectorAll('a').forEach(function(x){ x.classList.remove('taolu-nav-active'); });
+        a.classList.add('taolu-nav-active');
+      });
+    });
+  }
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('taoluSearchInput');
+  var searchBtn = document.getElementById('taoluSearchBtn');
+  var searchFeedback = document.getElementById('taoluSearchFeedback');
+  var searchPool = ['反转三次才叫套路','一句话就能改命','把老桥段拍出新证据','失败的反转也算数','电梯里第三次回头的人','陆时叙','周小满','北巷七号','职场群像','声音设计'];
+  function doSearch(){
+    if(!searchInput || !searchFeedback) return;
+    var q = searchInput.value.trim();
+    if(!q){
+      searchFeedback.innerHTML = '请输入关键词，例如「反转」「赛题」或创作者昵称。';
+      searchFeedback.classList.add('taolu-show');
+      return;
+    }
+    var hits = searchPool.filter(function(item){ return item.indexOf(q) !== -1; });
+    if(hits.length){
+      searchFeedback.innerHTML = '找到 <b>' + hits.length + '</b> 条相关内容：' + hits.slice(0,3).join('、') + (hits.length>3 ? ' 等' : '');
+    }else{
+      searchFeedback.innerHTML = '暂未匹配到「' + q.replace(/[<>&]/g,'') + '」，可试试「反转」「复盘」或创作者昵称。';
+    }
+    searchFeedback.classList.add('taolu-show');
+  }
+  if(searchBtn) searchBtn.addEventListener('click', doSearch);
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+    });
+    searchInput.addEventListener('input', function(){
+      if(!searchInput.value.trim() && searchFeedback) searchFeedback.classList.remove('taolu-show');
+    });
+  }
+  document.addEventListener('click', function(e){
+    if(searchFeedback && searchFeedback.classList.contains('taolu-show')){
+      if(!e.target.closest('.taolu-search-box')) searchFeedback.classList.remove('taolu-show');
+    }
+  });
+
+  /* 点赞 / 收藏 */
+  document.querySelectorAll('[data-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var countEl = btn.querySelector('.taolu-like-count');
+      var ico = btn.querySelector('.taolu-ico');
+      var liked = btn.classList.toggle('taolu-liked');
+      var num = countEl ? parseInt(countEl.textContent.replace(/[^0-9]/g,''),10) || 0 : 0;
+      if(liked){
+        num += 1;
+        if(ico) ico.textContent = '♥';
+        showToast('已为这支作品点了一次赞');
+      }else{
+        num = Math.max(0, num - 1);
+        if(ico) ico.textContent = '♡';
+      }
+      if(countEl) countEl.textContent = num.toLocaleString('en-US');
+    });
+  });
+  document.querySelectorAll('[data-save]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var saved = btn.classList.toggle('taolu-saved');
+      btn.childNodes.forEach(function(node){
+        if(node.nodeType === 3 && node.textContent.indexOf('收藏') !== -1){
+          node.textContent = saved ? '已收藏' : '收藏';
+        }
+      });
+      showToast(saved ? '已加入个人收藏夹' : '已取消收藏');
+    });
+  });
+
+  /* 分享（含复制链接） */
+  document.querySelectorAll('[data-share]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var text = '套路每日调教大赛 · 第128期焦点作品《电梯里第三次回头的人》，推荐给你看看。';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){
+          showToast('分享文案已复制，可发送给朋友');
+        }).catch(function(){
+          showToast('可长按页面内容复制分享');
+        });
+      }else{
+        showToast('可长按页面内容复制分享');
+      }
+    });
+  });
+
+  /* 报名弹窗 */
+  var modalMask = document.getElementById('taoluModalMask');
+  var modalTitle = document.getElementById('taoluModalTitle');
+  var modalDesc = document.getElementById('taoluModalDesc');
+  var modalName = document.getElementById('taoluModalName');
+  var modalNote = document.getElementById('taoluModalNote');
+  var modalConfirm = document.getElementById('taoluModalConfirm');
+  var modalCancel = document.getElementById('taoluModalCancel');
+  var modalMode = 'join';
+
+  function openModal(mode){
+    modalMode = mode || 'join';
+    if(modalMode === 'submit'){
+      modalTitle.textContent = '投稿与合作咨询';
+      modalDesc.textContent = '留下你的投稿意向或合作方向，编辑部会结合本期赛题安排具体沟通。';
+      modalConfirm.textContent = '发送咨询';
+    }else{
+      modalTitle.textContent = '报名参赛';
+      modalDesc.textContent = '填写创作者昵称与联系方式，编辑部会在一个工作日内发送本期赛题包与投稿入口。';
+      modalConfirm.textContent = '提交报名';
+    }
+    modalMask.classList.add('taolu-show');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function(){ if(modalName) modalName.focus(); }, 60);
+  }
+  function closeModal(){
+    modalMask.classList.remove('taolu-show');
+    document.body.style.overflow = '';
+  }
+  var joinBtn = document.getElementById('taoluJoinBtn');
+  var ctaJoin = document.getElementById('taoluCtaJoin');
+  var ctaSubmit = document.getElementById('taoluCtaSubmit');
+  if(joinBtn) joinBtn.addEventListener('click', function(){ openModal('join'); });
+  if(ctaJoin) ctaJoin.addEventListener('click', function(){ openModal('join'); });
+  if(ctaSubmit) ctaSubmit.addEventListener('click', function(){ openModal('submit'); });
+  if(modalCancel) modalCancel.addEventListener('click', closeModal);
+  if(modalMask) modalMask.addEventListener('click', function(e){ if(e.target === modalMask) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modalMask.classList.contains('taolu-show')) closeModal(); });
+
+  if(modalConfirm){
+    modalConfirm.addEventListener('click', function(){
+      var name = modalName ? modalName.value.trim() : '';
+      if(!name){
+        showToast('请先填写创作者昵称');
+        if(modalName) modalName.focus();
+        return;
+      }
+      closeModal();
+      showToast(modalMode === 'submit' ? '咨询已提交，编辑部会尽快联系你' : '报名成功，赛题包将发送至你的联系方式');
+      if(modalName) modalName.value = '';
+      if(modalNote) modalNote.value = '';
+    });
+  }
+
+  /* 回到顶部 */
+  var backtop = document.getElementById('taoluBacktop');
+  window.addEventListener('scroll', function(){
+    if(!backtop) return;
+    if(window.scrollY > 520){ backtop.classList.add('taolu-show'); }
+    else{ backtop.classList.remove('taolu-show'); }
+  }, {passive:true});
+  if(backtop){
+    backtop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  /* 赛题卡片点击提示 */
+  document.querySelectorAll('.taolu-topic-card').forEach(function(card){
+    card.addEventListener('click', function(){
+      var title = card.querySelector('h3');
+      showToast('已查看《' + (title ? title.textContent : '赛题') + '》详情要点');
+    });
+  });
+
+  /* 创作者卡片点击提示 */
+  document.querySelectorAll('.taolu-creator-card').forEach(function(card){
+    card.addEventListener('click', function(){
+      var name = card.querySelector('h3');
+      showToast('正在打开' + (name ? name.textContent : '创作者') + '的资料与作品列表');
+    });
+  });
+})();
+</script>
+</body>
+        </html>
